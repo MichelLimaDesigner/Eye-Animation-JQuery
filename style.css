@@ -1,0 +1,216 @@
+html, body {
+  width: 100%;
+  height: 100vh;
+  margin: 0px;
+  padding: 0px;
+  font-family: "Open Sans", sans-serif;
+  background-image: radial-gradient(circle, #d3d3d3, #696969);
+  transition: all 1s linear;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#olho{
+  width: 300px;
+  height: 300px;
+  border-radius: 100%;
+  background-image: linear-gradient(to top, #ecf0f1, white 40%);
+  margin: auto;
+  position: relative;
+  top: 50px;
+  box-shadow: inset 10px -10px 50px #696969;
+  transition: all 0.3s linear;
+  /*
+  animation-name: animacaoOlho;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  */
+}
+
+@keyframes animacaoOlho{
+  30%{ transform: translateY(5px);}
+  60%{ transform: translateY(-5px);}
+  100%{ transform: translateY(0px);}
+}
+
+.iris{
+  width: 150px;
+  height: 150px;
+  background-image: radial-gradient(circle,#54FF9F, #4682B4 90%);
+  border-radius: 100%;
+  margin: auto;
+  position: relative;
+  top: 80px;
+  filter: blur(0.3px);
+  transition: all 0.3s linear;
+  /*
+  animation-name: iris;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+  animation-timing-function: ease-out;
+  */
+}
+
+@keyframes iris{
+  25%{ transform:  translateX(70px) rotateY(20deg) scale(0.9);}
+  50%{ transform: translateY(-70px) rotateX(-20deg) scale(0.9);}
+  75%{ transform: translateX(-70px) rotateY(-20deg) scale(0.9);}
+  100%{ transform: translateY(70px) rotateX(20deg) scale(0.9);}
+}
+
+.preto{
+  width: 50px;
+  height: 50px;
+  background-color: black;
+  border-radius: 100%;
+  box-shadow: 0px 0px 15px;
+  position: relative;
+  top: 50px;
+  margin: auto;
+  filter: blur(0.3px);
+  transition: all 0.3s linear;
+  /*
+  animation-name: preto;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-out;
+  animation-direction: alternate-reverse;
+  */
+}
+
+@keyframes preto{
+  25%{ transform: translateX(20px);}
+  50%{ transform: translateY(-20px);}
+  75%{ transform: translateX(-20px);}
+  100%{ transform: translateY(20px);}
+}
+
+.brilho1{
+  width: 25px;
+  height: 25px;
+  background-color: white;
+  border-radius: 100%;
+  position: relative;
+  top: -20px;
+  left:95px;
+  filter: blur(2px);
+  box-shadow: 0px 0px 15px white;
+  transition: all 0.3s linear;
+  /*
+  animation-name: brilho1;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-out;
+  animation-direction: alternate-reverse;
+  */
+}
+
+@keyframes brilho1{
+  25%{ transform: translateX(5px);}
+  50%{ transform: translateY(-5px);}
+  75%{ transform: translateX(-5px);}
+  100%{ transform: translateY(5px);}
+}
+
+.brilho2{
+  width: 15px;
+  height: 15px;
+  background-color: white;
+  border-radius: 100%;
+  position: relative;
+  top: 40px;
+  left: 40px;
+  filter: blur(2px);
+  box-shadow: 0px 0px 10px white;
+  transition: all 0.3s linear;
+  /*
+  animation-name: brilho2;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-out;
+  animation-direction: alternate-reverse;
+  */
+}
+
+@keyframes brilho2{
+  25%{ transform: translateX(5px);}
+  50%{ transform: translateY(-5px);}
+  75%{ transform: translateX(-5px);}
+  100%{ transform: translateY(5px);}
+}
+
+.sombra{
+  width: 180px;
+  height: 20px;
+  background-color: #696969;
+  border-radius: 100%;
+  position: relative;
+  margin: auto;
+  filter: blur(5px);
+  box-shadow: 0px 0px 15px;
+  transition: all 0.3s linear;
+  /*
+  animation-name: sombra;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  */
+}
+
+@keyframes sombra{
+  30%{ transform: scale(1.1);}
+  60%{ transform: scale(1);}
+}
+  
+/*---------------------- DIV`S DE FUNDO DE MOVIMENTAÇÃO OLHO */
+  
+#topEsquerda{
+  width: 50%;
+  height: 50vh;
+  box-sizing: border-box;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+ 
+#topDireita{
+  width: 50%;
+  height: 50vh;
+  box-sizing: border-box;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  z-index: 999;
+}
+
+#bottomEsquerda{
+  width: 50%;
+  height: 50vh;
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+}
+
+#bottomDireita{
+  width: 50%;
+  height: 50vh;
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+}
+  
+.div-mouse{
+  width: 100%;
+  height: 12.5vh;
+/* border: solid 1px yellow; */
+  box-sizing: border-box;
+}
+/*
+.div-mouse:hover{
+  background-color: rgba(200, 200, 50, .4)
+}
+*/
